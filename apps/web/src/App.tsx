@@ -6,6 +6,7 @@ import { GetHelpPage } from "./pages/GetHelpPage";
 import { ResourcesPage } from "./pages/ResourcesPage";
 import { AskNayraPage } from "./pages/AskNayraPage";
 import "./styles.css";
+import { FirstVisitOverlay } from "./components/onboarding/FirstVisitOverlay";
 
 export default function App() {
   const { page, navigate } = useNayraNavigation();
@@ -18,5 +19,7 @@ export default function App() {
     ask: <AskNayraPage />,
   }[page];
 
-  return <AppShell active={page} onNavigate={navigate}>{content}</AppShell>;
+  return <AppShell active={page} onNavigate={navigate}>{content}
+  <FirstVisitOverlay />
+  </AppShell>;
 }

@@ -1,0 +1,16 @@
+services:
+  postgres:
+    image: postgres:17
+    container_name: nayra-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: nayra
+      POSTGRES_PASSWORD: nayra_dev_password
+      POSTGRES_DB: nayra
+    ports:
+      - "5432:5432"
+    volumes:
+      - nayra_postgres_data:/var/lib/postgresql/data
+
+volumes:
+  nayra_postgres_data:

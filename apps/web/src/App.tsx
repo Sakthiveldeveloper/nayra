@@ -7,13 +7,14 @@ import { HomePage } from "./pages/HomePage";
 import { LifeMapPage } from "./pages/LifeMapPage";
 import { GetHelpPage } from "./pages/GetHelpPage";
 import { ResourcesPage } from "./pages/ResourcesPage";
-import { AskNayraPage } from "./pages/AskNayraPage";
+import  AskNayraPage  from "./pages/AskNayraPage";
 import { PrivacyPage } from "./pages/PrivacyPage";
 import { TermsPage } from "./pages/TermsPage";
 
 import { FirstVisitOverlay } from "./components/onboarding/FirstVisitOverlay";
 
 import "./styles.css";
+import "./styles/ask-nayra.css";
 
 export default function App() {
   const { page, navigate } = useNayraNavigation();
@@ -41,11 +42,13 @@ export default function App() {
     home: <HomePage onNavigate={navigate} />,
     "life-map": <LifeMapPage onNavigate={navigate} />,
     help: <GetHelpPage />,
-    resources: <ResourcesPage />,
-    ask: <AskNayraPage />,
+    resources: <ResourcesPage onNavigate={navigate} />,
+    ask: <AskNayraPage  />,
     privacy: <PrivacyPage />,
     terms: <TermsPage />,
   }[page];
+
+  
 
   return (
     <AppShell

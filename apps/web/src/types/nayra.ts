@@ -1,4 +1,11 @@
-export type PageKey = "home" | "life-map" | "help" | "resources" | "ask";
+export type PageKey =
+  | "home"
+  | "life-map"
+  | "help"
+  | "resources"
+  | "ask"
+  | "privacy"
+  | "terms";
 
 export type LifeArea = {
   id: string;

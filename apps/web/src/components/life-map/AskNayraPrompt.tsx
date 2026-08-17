@@ -1,10 +1,9 @@
 type Props = {
-    // stageTitle: string;
+    stageTitle: string;
     onAsk: () => void;
   };
   
   export function AskNayraPrompt({
-    // stageTitle,
     onAsk,
   }: Props) {
     return (

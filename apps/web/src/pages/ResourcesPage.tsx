@@ -15,7 +15,7 @@ import { ResourcePrivacy } from "../components/resources/ResourcePrivacy";
 
 import {
   resourceLifeStages,
-  resourceSituations,
+  // resourceSituations,
 } from "../data/resources.data";
 
 type Props = {

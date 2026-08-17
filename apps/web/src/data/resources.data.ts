@@ -1,4 +1,3 @@
-import type { PageKey } from "../types/nayra";
 
 export type ResourceLifeStage =
   | "childhood"
